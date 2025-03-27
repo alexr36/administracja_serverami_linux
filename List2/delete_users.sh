@@ -27,12 +27,10 @@ tail -n +2 "$file" | while IFS=',' read -r EmployeeID Department DistinguishedNa
         continue
     fi
 
-
     # Checking if user with given username exists
     if ! id "$username" &>/dev/null; then
         continue
     fi
 
     userdel -r "$username"
-
 done < "$file"
