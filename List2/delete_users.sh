@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# This script needs to be run using sudo command.
+
 
 # Checking if the number of arguments is correct
 if [[ "$#" != 1 ]]; then
