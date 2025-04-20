@@ -23,7 +23,7 @@ fi
 # Deleting users with their home directories
 tail -n +2 "$file" | while IFS=',' read -r EmployeeID Department DistinguishedName Enabled GivenName mail Manager Name ObjectClass ObjectGUID OfficePhone SamAccountName SID sn Surname Title UserPrincipalName; do
     username="$SamAccountName"
-    
+
     # Checking if username is not null
     if [[ -z "$username" ]]; then
         continue

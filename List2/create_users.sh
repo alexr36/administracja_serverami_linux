@@ -7,7 +7,7 @@
 if [[ "$#" != 1 ]]; then
     echo "Passed too many arguments: $#"
     exit 1
-fi    
+fi
 
 
 file="$1"
@@ -25,7 +25,7 @@ tail -n +2 "$file" | while IFS=',' read -r EmployeeID Department DistinguishedNa
     username="$SamAccountName"
     full_name="$Name"
     password="default_password"
-    
+
     # Checking if username and fullname is not null
     if [[ -z "$username" || -z "$full_name" ]]; then
         continue
@@ -37,6 +37,5 @@ tail -n +2 "$file" | while IFS=',' read -r EmployeeID Department DistinguishedNa
     fi
 
     useradd -m -c "$full_name" -s /bin/bash "$username"
-    "$username:$password" | chpasswd
-    chage -d 0 "$username"
+    echo "$username:$username" | chpasswd
 done < "$file"
