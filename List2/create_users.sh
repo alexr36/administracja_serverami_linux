@@ -5,7 +5,7 @@
 
 # Checking if the number of arguments is correct
 if [[ "$#" != 1 ]]; then
-    echo "Passed too many arguments: $#"
+    echo "Passed wrong amount of arguments: $#"
     exit 1
 fi
 
