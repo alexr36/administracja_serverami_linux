@@ -1,4 +1,4 @@
-# Administracja Serverami Linux
+# Administracja Serwerami Linux
 (Linux Servers Administration)
 
 ## Language used
